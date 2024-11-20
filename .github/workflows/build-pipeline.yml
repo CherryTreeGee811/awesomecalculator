@@ -47,17 +47,8 @@ jobs:
         cd src
         python3 -m pip install --user --upgrade build
         python3 -m build
-    
     - name: Deploy to TestPyPI
       run: |
         cd Flask_Image_Recognition-main
         source ./.venv/bin/activate
         twine upload --repository awesomecalculator dist/* --username __token__ --password pypi-AgENdGVzdC5weXBpLm9yZwIkYzVhMzlhMzYtMDdmNy00OGVhLTljOGItZDZlOTk0YTllZTA5AAIqWzMsIjMzOWMyNTY2LThjMWUtNGQyZC05OTA2LWVlOTk0N2Y4ODY3YiJdAAAGICjX6Prq_x6j8b3xhCB3rsUXuqPrUz38t1yQ4u5wMOKQ
-        
-    - name: Archive package
-      uses: actions/upload-artifact@v4
-      with:
-        name: awesome-calculator
-        path: src/dist    
-
-
