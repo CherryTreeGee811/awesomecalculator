@@ -50,4 +50,4 @@ jobs:
     - name: Deploy to TestPyPI
       run: |
         cd src
-        twine upload --repository testpypi dist/* --username __token__ --password pypi-AgENdGVzdC5weXBpLm9yZwIkYzVhMzlhMzYtMDdmNy00OGVhLTljOGItZDZlOTk0YTllZTA5AAIqWzMsIjMzOWMyNTY2LThjMWUtNGQyZC05OTA2LWVlOTk0N2Y4ODY3YiJdAAAGICjX6Prq_x6j8b3xhCB3rsUXuqPrUz38t1yQ4u5wMOKQ --verbose
+        twine upload --repository group2awesomecalculator dist/* --username __token__ --password pypi-AgENdGVzdC5weXBpLm9yZwIkYzVhMzlhMzYtMDdmNy00OGVhLTljOGItZDZlOTk0YTllZTA5AAIqWzMsIjMzOWMyNTY2LThjMWUtNGQyZC05OTA2LWVlOTk0N2Y4ODY3YiJdAAAGICjX6Prq_x6j8b3xhCB3rsUXuqPrUz38t1yQ4u5wMOKQ
