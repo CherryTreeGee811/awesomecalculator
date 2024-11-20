@@ -21,15 +21,18 @@ jobs:
       with:
         python-version: 3.7
     - name: Install dependencies
+      shell: bash
       run: |
         cd src
-        python -m pip install --upgrade pip
-        pip install coverage
+        python3 -m pip install --upgrade pip
+        pip3 install coverage
+        pip3 install twine
         if  [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Unit Tests and generate coverage report
+      shell: bash
       run: |
         cd src
-        python -m unittest -v
+        python3 -m unittest -v
         coverage run -m unittest
         coverage report
         coverage html
@@ -39,10 +42,11 @@ jobs:
         name: code-coverage-report
         path: src/htmlcov
     - name: Run package creation
+      shell: bash
       run: |
         cd src
-        python -m pip install --user --upgrade build
-        python -m build
+        python3 -m pip install --user --upgrade build
+        python3 -m build
     - name: Archive package
       uses: actions/upload-artifact@v4
       with:
